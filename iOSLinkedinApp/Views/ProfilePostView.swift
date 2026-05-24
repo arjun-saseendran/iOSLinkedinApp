@@ -9,7 +9,28 @@ import SwiftUI
 
 struct ProfilePostView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading){
+            SearchBarView()
+            Divider()
+            HStack{
+                Image(systemName: "square.and.pencil")
+                Text("Share a post")
+            }.padding(.horizontal)
+            Divider()
+            HStack{
+                Image(systemName: "photo")
+                    .foregroundColor(.blue)
+                Text("Photo")
+                Spacer()
+                Image(systemName: "video.fill")
+                    .foregroundColor(Color.green)
+                Text("Video")
+                Spacer()
+                Image(systemName: "calendar")
+                    .foregroundColor(Color.orange)
+                Text("Calendar")
+            }.padding(.horizontal)
+        }
     }
 }
 
